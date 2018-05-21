@@ -13,3 +13,10 @@ desc 'outputs hello to the terminal'
     puts "hola de Rake!"
   end
 end
+
+namespave :db do
+  desc 'migrate changes to your database'
+  task :migrate => :envoronment do
+    Student.create_table
+  end 
+end
